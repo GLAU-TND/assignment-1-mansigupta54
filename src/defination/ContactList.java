@@ -3,6 +3,14 @@ package defination;
 import contactADT.ContactADT;
 
 public class ContactList<E> implements ContactADT<E> {
+
+    private void addFirst(){
+
+    }
+
+    private void addLast(){
+
+    }
     @Override
     public E add() {
         return null;
