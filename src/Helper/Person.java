@@ -16,6 +16,17 @@ package Helper;
             this.firstName = firstName;
         }
 
+        //Getter for last name
+        public String getLastName() {
+            return lastName;
+        }
+
+        //Setter for last name
+        public void setLastName(String lastName) {
+            System.out.println(lastName);
+            this.lastName = lastName;
+        }
+
 
     }
 
