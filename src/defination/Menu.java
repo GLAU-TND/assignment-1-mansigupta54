@@ -75,5 +75,9 @@ import java.util.Scanner;
             linkedList.insert(node);
         }
 
+        private void sortList(MyLinkedList<Person> linkedList){
+            linkedList.sort();
+        }
+
 
     }
