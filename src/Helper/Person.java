@@ -27,6 +27,16 @@ package Helper;
             this.lastName = lastName;
         }
 
+        //Getter for Email ID
+        public String getEmailID() {
+            return emailID;
+        }
+
+        //Setter for EmailID
+        public void setEmailID(String emailID) {
+            this.emailID = emailID;
+        }
+
 
     }
 
