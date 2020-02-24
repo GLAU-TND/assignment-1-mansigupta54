@@ -35,5 +35,42 @@ import Helper.Node;
             }
         }
 
+        //method to delete node from beginning
+        public Node<T> delete() {
+            if (isEmpty()) {
+                System.out.println("Underflow");
+                return null;
+            }
+            Node<T> temp = getHead();
+            setHead(getHead().getNext());
+            return temp;
+        }
+
+        //method to delete node at particular position
+        public Node<T> delete(int i) {
+            Node<T> deletedNode ;
+            Node<T> temp = getHead();
+            if (isEmpty()) {
+                System.out.println("Underflow");
+                return temp;
+            }
+            if (i == 1) {
+                deletedNode = getHead();
+                setHead(null);
+            } else {
+                for (int j = 1; j < i - 1; j++) {
+                    temp = temp.getNext();
+                }
+                deletedNode = temp.getNext();
+                temp.setNext(temp.getNext().getNext());
+            }
+            return deletedNode;
+        }
+
+        //Helper method to check if linked list is empty or not
+        public boolean isEmpty() {
+            return head == null;
+        }
+
 
     }
