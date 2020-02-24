@@ -1,41 +1,34 @@
 package main;
+import defination.Menu;
 
+import java.sql.SQLException;
 import java.util.Scanner;
-import defination.ContactList;
 
 public class Main {
-    public static void main(String[] args) {
-        ContactList<Integer> list = new ContactList<>();
-        while (true) {
-            Scanner sc = new Scanner(System.in);
-            System.out.println("Welcome to mansi's contactList");
-            System.out.println("Press 1 to add a new contact");
-            System.out.println("Press 2 to view all contacts");
-            System.out.println("Press 3 to search for a contact");
-            System.out.println("Press 4 to delete a contact");
-            System.out.println("Press 5 to exit program");
-            System.out.println("Enter Choice");
+    public static void main(String[] args) throws SQLException {
+        boolean flag=true;
+        Menu menu=new Menu();
+        while (flag) {
 
-            int choice = sc.nextInt();
-            switch (choice) {
+            int n = menu.showChoice();
+            switch (n) {
                 case 1:
-                    int num = sc.nextInt();
-                    System.out.println(list.add());
+                    menu.addChoice();
                     break;
                 case 2:
-                    System.out.println(list.view());
+                    menu.viewChoice();
                     break;
                 case 3:
-                    System.out.println(list.search());
+                    menu.searchChoice();
                     break;
                 case 4:
-                    System.out.println(list.delete());
+                    menu.deleteChoice();
                     break;
                 case 5:
-                    System.exit(0);
+                    menu.exitChoice();
+                    flag=false;
                     break;
-                default:
-                    System.out.println("Entered Wrong Choice");
+
             }
         }
     }
