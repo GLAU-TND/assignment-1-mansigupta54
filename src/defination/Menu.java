@@ -130,5 +130,7 @@ import java.util.Scanner;
             System.out.println(person.getFirstName() + " " + person.getLastName() + "'s contact deleted from list!");
         }
 
-
+        public void exitChoice() {
+            System.out.println("Exiting");
+        }
     }
